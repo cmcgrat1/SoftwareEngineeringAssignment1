@@ -10,5 +10,16 @@ public class LCA_Test {
 	public void testNullTree() {
 		assertNull(tree.root);
 	}
+	
+	@Test
+	public void testConstructor() {
+
+		Node rootNode = new Node(0); 
+		assertEquals("Only one node, left site is equal to null",null ,rootNode.left);
+		assertEquals("Only one node, right side is equal to null",null ,rootNode.right);
+		assertEquals("Value = 0",0 ,rootNode.data);
+	}
+	
+
 
 }
