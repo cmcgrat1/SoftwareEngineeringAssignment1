@@ -20,6 +20,19 @@ public class LCA_Test {
 		assertEquals("Value = 0",0 ,rootNode.data);
 	}
 	
+	@Test
+	public void testSmallTree() {
+		
+		tree.root = new Node(5);
+		tree.root.left = new Node(7);
+		
+		assertEquals(5 ,tree.findLCA(7, 5));
+		assertEquals(5 ,tree.findLCA(5, 7));
+		assertEquals(7 ,tree.root.left.data);
+		assertNull(tree.root.right);
+		assertEquals(5 ,tree.root.data);
+	}
+	
 
 
 }
