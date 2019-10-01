@@ -15,7 +15,25 @@ public class LCA_Test {
 	
 	
 	LCA tree = new LCA();
-
+	
+        @Test
+	public void testTree() {
+		createTree();
+        //testing if the function is working
+		//testing that function is not affected by order 
+		assertEquals("LCA = 5",5 ,tree.findLCA(1, 6));
+		assertEquals("LCA = 5",5 ,tree.findLCA(6, 1));
+		
+		
+		assertEquals("LCA = 5",5 ,tree.findLCA(3, 8));
+		assertEquals("LCA = 5",5 ,tree.findLCA(3, 8));
+		
+		assertEquals("LCA = 4",4 ,tree.findLCA(9, 8));
+		assertEquals("LCA = 4",4 ,tree.findLCA(8, 9));
+		
+		assertEquals("LCA = 6",6 ,tree.findLCA(9, 0));
+		assertEquals("LCA = 6",6 ,tree.findLCA(0, 9));
+	}
 	@Test
 	public void testNullTree() {
 		assertNull(tree.root);
